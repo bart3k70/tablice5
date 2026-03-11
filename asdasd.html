@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <input id="wejscie">
+    <button onclick="szukaj()">Sprawdź</button>
+    <div id="odp"></div>
+
+    <script>
+        let rzeczy = ["dom", "auto", "bleble", "klucze"];
+
+        function szukaj() {
+            let tekst = document.getElementById("wejscie").value;
+            let pole = document.getElementById("odp");
+
+            if (rzeczy.includes(tekst)) {
+                pole.innerHTML = 'Wyraz "' + tekst + '" znajduje się.';
+            } else {
+                pole.innerHTML = "O nie, jesteśmy straceni, nie ma go tu.";
+            }
+        }
+    </script>
+</body>
+</html>
